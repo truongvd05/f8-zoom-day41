@@ -1,0 +1,41 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(160, 160, 160);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  font-size: 5rem;
+  animation: sprin 2s infinite;
+}
+
+@keyframes sprin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// .loader {
+//   animation: fade 2s infinite;
+//   animation-delay: var(--delay);
+//   color: transparent;
+//   background-image: linear-gradient(90deg,rgba(162, 58, 180, 1) 0%, rgba(255, 180, 74, 1) 100%);;
+//   background-clip: text;
+//   -webkit-background-clip: text;
+//   font-size: 3rem;
+// }
+
+// @keyframes fade {
+//   0% { opacity: 0.2; }
+//   50% { opacity: 1; }
+//   100% { opacity: 0.2; }
+// }

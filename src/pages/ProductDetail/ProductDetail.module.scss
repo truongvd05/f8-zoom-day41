@@ -1,0 +1,27 @@
+
+.container {
+    display: flex;
+    width: 400px;
+    margin: 0 auto;
+}
+
+
+.wrap {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+}
+
+.btn {
+    display: flex;
+    width: 100px;
+    margin-left: 200px;
+    padding: 10px;
+}
+
+.title {
+    margin-left: 200px;
+    font-size: 3rem;
+}
