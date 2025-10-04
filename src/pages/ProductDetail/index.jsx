@@ -1,5 +1,5 @@
 import Loading from "@/components/Loading";
-import { productAction, useProductDetail } from "@/store/product";
+import { productActions, useProductDetail } from "@/store/product";
 import { useLoading } from "@/store/ui";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -14,14 +14,14 @@ function ProductDetail() {
     const loading = useLoading();
     const item = useProductDetail();
     useEffect(() => {
-        dispatch(productAction.getDetail(slug))
+        dispatch(productActions.getDetail(slug))
     }, [dispatch, slug])
     if(loading) {
         return <Loading/>
     }
     return (
         <>
-            <button className={style.btn} onClick={() => navigation("/")} >back</button>
+            <button className={style.btn} onClick={() => navigation(-1)} >back</button>
             <h1 className={style.title}>Product detail</h1>
             <div className={style.container}>
                 <div className={style.wrap}>

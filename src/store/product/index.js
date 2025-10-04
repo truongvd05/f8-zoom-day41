@@ -1,6 +1,6 @@
 export { default as productReducer } from "./reducer";
 
-export * as productAction from "./action";
-export * as ProductConstants from "./constants";
-export * from "./hoocks";
-export * as ProductSelector from "./selector";
+export * as productActions from "./actions";
+export * as productConstants from "./constants";
+export * from "./hooks";
+export * as productSelectors from "./selectors";

@@ -1,4 +1,4 @@
-import AppRoutes from "../components/AppRoutes";
+import AppRoutes from "@/components/Approutes";
 import "./main.scss";
 
 function App() {

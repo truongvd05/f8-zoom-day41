@@ -1,14 +1,14 @@
 import { useSelector } from "react-redux";
-import { ProductSelector } from ".";
+import { productSelectors } from ".";
 
 export const useProducts = () => {
-    const items = useSelector(ProductSelector.selectProductList);
+    const items = useSelector(productSelectors.selectProductList);
     return items;
 };
 
 export const useProductDetail = () => {
-    const items = useSelector(ProductSelector.getProductDetail);
-    return items;
+    const item = useSelector(productSelectors.getProductDetail);
+    return item;
 };
 
 export const hooks = { useProducts, useProductDetail };

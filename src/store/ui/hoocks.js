@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import { uiSlector } from ".";
+import { uiSelector } from ".";
 
 export const useLoading = () => {
-    const loading = useSelector(uiSlector.getLoading);
+    const loading = useSelector(uiSelector.getLoading);
     return loading;
 };

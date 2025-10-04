@@ -1,9 +1,9 @@
-import { productAction, useProducts } from "@/store/product";
+import { productActions, useProducts } from "@/store/product";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
 import style from './ProductList.module.scss'
-import { NavLink } from "react-router";
+import { Link } from "react-router";
 import { useLoading } from "@/store/ui";
 import Loading from "@/components/Loading";
 
@@ -12,7 +12,7 @@ function ProductList() {
     const items = useProducts();
     const loading = useLoading();
     useEffect(() => {
-            dispatch(productAction.getlist())
+            dispatch(productActions.getlist())
     }, [dispatch])
     if(loading) {
         return <Loading/>
@@ -25,7 +25,7 @@ function ProductList() {
                 <div key={item.id} className={style.box}>
                     <img src={item.thumbnail} alt="" />
                     <li >{item.title}</li>
-                    <NavLink to={`/products/${item.slug}`} className={style.btn}>Click</NavLink>
+                    <Link to={`/products/${item.slug}`} className={style.btn}>Click</Link>
                 </div>
                 ))}
             </ul>

@@ -9,6 +9,13 @@ const rootReducer = combineReducers({
     ui: uiReducer,
 });
 
-const store = legacy_createStore(rootReducer, applyMiddleware(thunk));
+const middlewares = [thunk];
+
+// chỉ thêm logger nếu đang ở development
+if (import.meta.env.MODE === "development") {
+    middlewares.push(logger);
+}
+
+const store = legacy_createStore(rootReducer, applyMiddleware(...middlewares));
 
 export default store;
